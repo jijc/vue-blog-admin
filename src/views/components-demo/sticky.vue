@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 / Sticky (吸附顶部)
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:48 下午
+**/
 <template>
   <div>
     <sticky :z-index="10" class-name="sub-navbar">

@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /可拖拽看板
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:40 下午
+**/
 <template>
   <div class="components-container board">
     <Kanban :key="1" :list="list1" :group="group" class="kanban todo" header-text="Todo" />

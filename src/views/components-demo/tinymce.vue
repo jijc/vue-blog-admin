@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /富文本编辑器
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:55 下午
+**/
 <template>
   <div class="components-container">
     <aside>

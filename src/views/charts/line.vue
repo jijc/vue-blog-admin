@@ -1,3 +1,9 @@
+/**
+ * @des: 方法描述
+ * @param: 首页/图表 /折线图
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:35 下午
+**/
 <template>
   <div class="chart-container">
     <chart height="100%" width="100%" />

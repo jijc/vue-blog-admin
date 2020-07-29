@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /列表拖拽
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:39 下午
+**/
 <template>
   <div class="components-container">
     <aside>drag-list base on

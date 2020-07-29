@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /小组件
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:43 下午
+**/
 <template>
   <div class="mixin-components-container">
     <el-row>

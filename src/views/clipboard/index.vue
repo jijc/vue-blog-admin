@@ -1,3 +1,9 @@
+/**
+ * @des: 方法描述
+ * @param: 首页 / Clipboard (剪切板 -- 复制功能)
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:32 下午
+**/
 <template>
   <div class="app-container">
     <el-tabs v-model="activeName">

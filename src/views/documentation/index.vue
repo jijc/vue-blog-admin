@@ -1,3 +1,9 @@
+/**
+ * @des: 首页/文档
+ * @param: 无
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 4:13 下午
+**/
 <template>
   <div class="app-container documentation-container">
     <a class="document-btn" target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/">Documentation</a>

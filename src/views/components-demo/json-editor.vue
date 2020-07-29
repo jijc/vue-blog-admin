@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /JSON 编辑器
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:42 下午
+**/
 <template>
   <div class="components-container">
     <aside>Json-Editor is base on <a href="https://github.com/codemirror/CodeMirror" target="_blank">CodeMirrorr</a>. Lint

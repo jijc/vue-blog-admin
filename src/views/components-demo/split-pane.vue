@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 / Splitpane （拆分窗格）
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:47 下午
+**/
 <template>
   <div class="components-container">
     <aside><strong>SplitPane</strong> If you've used

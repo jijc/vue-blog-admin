@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /Dropzone  （拖拽上传）
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:41 下午
+**/
 <template>
   <div class="components-container">
     <aside>

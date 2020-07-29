@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /头像上传
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:36 下午
+**/
 <template>
   <div class="components-container">
     <aside>This is based on

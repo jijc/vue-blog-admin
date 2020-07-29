@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /拖拽 Select
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:41 下午
+**/
 <template>
   <div class="components-container">
     <el-drag-select v-model="value" style="width:500px;" multiple placeholder="请选择">

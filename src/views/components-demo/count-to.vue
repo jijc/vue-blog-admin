@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /Count To （计算）
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:37 下午
+**/
 <template>
   <div class="components-container">
     <aside>

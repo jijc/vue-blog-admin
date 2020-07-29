@@ -1,3 +1,9 @@
+/**
+ * @des: 编辑 (个人信息模块)
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 4:09 下午
+**/
 <template>
   <div class="dashboard-editor-container">
     <div class=" clearfix">

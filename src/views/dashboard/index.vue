@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 (仪表盘)
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 4:04 下午
+**/
 <template>
   <div class="dashboard-container">
     <component :is="currentRole" />

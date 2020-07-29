@@ -1,7 +1,13 @@
+/**
+ * @des: 首页 / 组件 /拖拽 Dialog
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:40 下午
+**/
 <template>
   <div class="components-container">
     <el-button type="primary" @click="dialogTableVisible = true">
-      open a Drag Dialog
+      打开一个弹窗
     </el-button>
     <el-dialog v-el-drag-dialog :visible.sync="dialogTableVisible" title="Shipping address" @dragDialog="handleDrag">
       <el-select ref="select" v-model="value" placeholder="请选择">

@@ -1,3 +1,9 @@
+/**
+ * @des: 首页 / 组件 /返回顶部
+ * @param:
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 3:37 下午
+**/
 <template>
   <div class="components-container">
     <aside>{{ $t('components.backToTopTips1') }}</aside>
