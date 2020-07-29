@@ -1,13 +1,23 @@
+/**
+ * @des: 布局
+ * @param: 无
+ * @author: JiJinChi
+ * @date: 2020/7/29 - 4:21 下午
+**/
 <template>
   <div :class="classObj" class="app-wrapper">
     <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
     <sidebar class="sidebar-container" />
+
     <div :class="{hasTagsView:needTagsView}" class="main-container">
+
       <div :class="{'fixed-header':fixedHeader}">
         <navbar />
         <tags-view v-if="needTagsView" />
       </div>
+
       <app-main />
+
       <right-panel v-if="showSettings">
         <settings />
       </right-panel>
@@ -40,6 +50,7 @@ export default {
       needTagsView: state => state.settings.tagsView,
       fixedHeader: state => state.settings.fixedHeader
     }),
+    // 动态类名
     classObj() {
       return {
         hideSidebar: !this.sidebar.opened,
