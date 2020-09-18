@@ -1,3 +1,9 @@
+/**
+ * @des: 方法描述
+ * @param: 首页 / Table / 综合 Table
+ * @author: JiJinChi
+ * @date: 2020/7/30 - 2:29 下午
+**/
 <template>
   <div class="app-container">
     <div class="filter-container">
@@ -147,7 +153,8 @@
 </template>
 
 <script>
-import { fetchList, fetchPv, createArticle, updateArticle } from '@/api/article'
+
+import { fetchList, createArticle } from '@/api/article'
 import waves from '@/directive/waves' // waves directive
 import { parseTime } from '@/utils'
 import Pagination from '@/components/Pagination' // secondary package based on el-pagination
@@ -158,7 +165,6 @@ const calendarTypeOptions = [
   { key: 'JP', display_name: 'Japan' },
   { key: 'EU', display_name: 'Eurozone' }
 ]
-
 // arr to obj, such as { CN : "China", US : "USA" }
 const calendarTypeKeyValue = calendarTypeOptions.reduce((acc, cur) => {
   acc[cur.key] = cur.display_name
@@ -313,25 +319,25 @@ export default {
         this.$refs['dataForm'].clearValidate()
       })
     },
-    updateData() {
-      this.$refs['dataForm'].validate((valid) => {
-        if (valid) {
-          const tempData = Object.assign({}, this.temp)
-          tempData.timestamp = +new Date(tempData.timestamp) // change Thu Nov 30 2017 16:41:05 GMT+0800 (CST) to 1512031311464
-          updateArticle(tempData).then(() => {
-            const index = this.list.findIndex(v => v.id === this.temp.id)
-            this.list.splice(index, 1, this.temp)
-            this.dialogFormVisible = false
-            this.$notify({
-              title: '成功',
-              message: '更新成功',
-              type: 'success',
-              duration: 2000
-            })
-          })
-        }
-      })
-    },
+    // updateData() {
+    //   this.$refs['dataForm'].validate((valid) => {
+    //     if (valid) {
+    //       const tempData = Object.assign({}, this.temp)
+    //       tempData.timestamp = +new Date(tempData.timestamp) // change Thu Nov 30 2017 16:41:05 GMT+0800 (CST) to 1512031311464
+    //       updateArticle(tempData).then(() => {
+    //         const index = this.list.findIndex(v => v.id === this.temp.id)
+    //         this.list.splice(index, 1, this.temp)
+    //         this.dialogFormVisible = false
+    //         this.$notify({
+    //           title: '成功',
+    //           message: '更新成功',
+    //           type: 'success',
+    //           duration: 2000
+    //         })
+    //       })
+    //     }
+    //   })
+    // },
     handleDelete(row, index) {
       this.$notify({
         title: '成功',
@@ -341,12 +347,12 @@ export default {
       })
       this.list.splice(index, 1)
     },
-    handleFetchPv(pv) {
-      fetchPv(pv).then(response => {
-        this.pvData = response.data.pvData
-        this.dialogPvVisible = true
-      })
-    },
+    // handleFetchPv(pv) {
+    //   fetchPv(pv).then(response => {
+    //     this.pvData = response.data.pvData
+    //     this.dialogPvVisible = true
+    //   })
+    // },
     handleDownload() {
       this.downloadLoading = true
       import('@/vendor/Export2Excel').then(excel => {

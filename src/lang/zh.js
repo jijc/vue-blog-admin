@@ -27,7 +27,8 @@ export default {
     keyboardChart: '键盘图表',
     lineChart: '折线图',
     mixChart: '混合图表',
-    example: '综合实例',
+    Article: '文章',
+    class: '分类',
     nested: '路由嵌套',
     menu1: '菜单1',
     'menu1-1': '菜单 1-1',
@@ -81,6 +82,12 @@ export default {
     thirdparty: '第三方登录',
     thirdpartyTips: '本地不能模拟，请结合自己业务进行模拟！！！'
   },
+  register: {
+    title: '注册',
+    register: '注册',
+    username: '账号',
+    password: '密码'
+  },
   documentation: {
     documentation: '文档',
     github: 'Github 地址'
@@ -116,6 +123,7 @@ export default {
     title: '标题',
     importance: '重要性',
     type: '类型',
+    tag: '标签',
     remark: '点评',
     search: '搜索',
     add: '添加',

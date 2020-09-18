@@ -1,41 +1,38 @@
 import request from '@/utils/request'
 
-export function fetchList(query) {
+// 获取列表
+export function fetchList(data) {
   return request({
-    url: '/vue-element-admin/article/list',
-    method: 'get',
-    params: query
-  })
-}
-
-export function fetchArticle(id) {
-  return request({
-    url: '/vue-element-admin/article/detail',
-    method: 'get',
-    params: { id }
-  })
-}
-
-export function fetchPv(pv) {
-  return request({
-    url: '/vue-element-admin/article/pv',
-    method: 'get',
-    params: { pv }
-  })
-}
-
-export function createArticle(data) {
-  return request({
-    url: '/vue-element-admin/article/create',
+    url: '/api/article/list',
     method: 'post',
     data
   })
 }
 
-export function updateArticle(data) {
+// 获取文章
+export function fetchArticle(id) {
   return request({
-    url: '/vue-element-admin/article/update',
+    url: '/api/article/detail',
+    method: 'get',
+    params: { id }
+  })
+}
+
+// 创建文章
+export function createArticle(data) {
+  return request({
+    url: '/api/article/save',
     method: 'post',
+    data
+  })
+}
+
+// 删除文章
+export function deleteArticle(data) {
+  console.log('data', data)
+  return request({
+    url: '/api/article/del/' + data,
+    method: 'delete',
     data
   })
 }

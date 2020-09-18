@@ -15,6 +15,8 @@ export default {
     dndList: 'Lista Dnd',
     splitPane: 'Panel dividido',
     avatarUpload: 'Subir avatar',
+    article: 'Artigo',
+    class: 'Klasse',
     dropzone: 'Subir ficheros',
     sticky: 'Sticky',
     countTo: 'CountTo',
@@ -81,6 +83,12 @@ export default {
     thirdparty: 'Conectar con',
     thirdpartyTips: 'No se puede simular en local, así que combine su propia simulación de negocios. ! !'
   },
+  register: {
+    title: '注册',
+    register: '注册',
+    username: '账号',
+    password: '密码'
+  },
   documentation: {
     documentation: 'Documentación',
     github: 'Repositorio Github'
@@ -116,6 +124,7 @@ export default {
     title: 'Título',
     importance: 'Importancia',
     type: 'Tipo',
+    tag: 'Tipo',
     remark: 'Remark',
     search: 'Buscar',
     add: 'Añadir',

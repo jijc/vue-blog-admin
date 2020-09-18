@@ -11,6 +11,8 @@ export default {
     components: 'コンポーネント',
     tinymce: 'TinyMCE',
     markdown: 'Markdown',
+    article: '文章',
+    class: 'クラス',
     jsonEditor: 'JSON Editor',
     dndList: 'Drag-And-Drop',
     splitPane: 'パネル',
@@ -81,6 +83,12 @@ export default {
     thirdparty: '外部IDでログイン',
     thirdpartyTips: 'ローカル環境ではログインできません。実装が必要です。'
   },
+  register: {
+    title: '注册',
+    register: '注册',
+    username: '账号',
+    password: '密码'
+  },
   documentation: {
     documentation: 'ドキュメント',
     github: 'Github Link'
@@ -116,6 +124,7 @@ export default {
     title: 'タイトル',
     importance: '重要',
     type: 'タイプ',
+    tag: 'タイプ',
     remark: '評価',
     search: '検索',
     add: '追加',

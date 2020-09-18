@@ -121,7 +121,6 @@
 import PanThumb from '@/components/PanThumb'
 import MdInput from '@/components/MDinput'
 import Mallki from '@/components/TextHoverEffect/Mallki'
-import DropdownMenu from '@/components/Share/DropdownMenu'
 import waves from '@/directive/waves/index.js' // 水波纹指令
 
 export default {
@@ -129,8 +128,7 @@ export default {
   components: {
     PanThumb,
     MdInput,
-    Mallki,
-    DropdownMenu
+    Mallki
   },
   directives: {
     waves

@@ -4,20 +4,20 @@
 
       <div class="title-container">
         <h3 class="title">
-          {{ $t('login.title') }}
+          {{ $t('register.title') }}
         </h3>
         <lang-select class="set-language" />
       </div>
 
-      <el-form-item prop="user_name">
+      <el-form-item prop="username">
         <span class="svg-container">
           <svg-icon icon-class="user" />
         </span>
         <el-input
-          ref="user_name"
-          v-model="loginForm.user_name"
+          ref="username"
+          v-model="loginForm.username"
           :placeholder="$t('login.username')"
-          name="user_name"
+          name="username"
           type="text"
           tabindex="1"
           autocomplete="on"
@@ -49,8 +49,9 @@
       </el-tooltip>
 
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">
-        {{ $t('login.logIn') }}
+        {{ $t('register.title') }}
       </el-button>
+
     </el-form>
 
   </div>
@@ -59,10 +60,9 @@
 <script>
 import { validUsername } from '@/utils/validate'
 import LangSelect from '@/components/LangSelect'
-// import SocialSign from './components/SocialSignin'
 
 export default {
-  name: 'Login',
+  name: 'Register',
   components: { LangSelect },
   data() {
     const validateUsername = (rule, value, callback) => {
@@ -81,11 +81,11 @@ export default {
     }
     return {
       loginForm: {
-        user_name: 'admin',
-        password: '111111'
+        username: '',
+        password: ''
       },
       loginRules: {
-        user_name: [{ required: true, trigger: 'blur', validator: validateUsername }],
+        username: [{ required: true, trigger: 'blur', validator: validateUsername }],
         password: [{ required: true, trigger: 'blur', validator: validatePassword }]
       },
       passwordType: 'password',
@@ -112,8 +112,8 @@ export default {
     // window.addEventListener('storage', this.afterQRScan)
   },
   mounted() {
-    if (this.loginForm.user_name === '') {
-      this.$refs.user_name.focus()
+    if (this.loginForm.username === '') {
+      this.$refs.username.focus()
     } else if (this.loginForm.password === '') {
       this.$refs.password.focus()
     }
@@ -138,25 +138,24 @@ export default {
     },
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
-        console.log('[ - ]: ', '2321312')
         if (valid) {
-          console.log('[ - ]: ', '44343224')
-          this.loading = true
-          this.$store.dispatch('user/login', this.loginForm)
-            .then(() => {
-              console.log('[ - ]: ', '22222222')
-              this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
-              this.loading = false
-            })
-            .catch(() => {
-              console.log('[ - ]: ', this.redirect)
-              this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
-              console.log('[ - ]: ', '3333333')
-              this.loading = false
-            })
+          alert('注册功能已被关闭！')
+          // this.loading = true
+          // this.$store.dispatch('user/login', this.loginForm)
+          //   .then(() => {
+          //     console.log('[ - ]: ', '22222222');
+          //     this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
+          //     this.loading = false
+          //   })
+          //   .catch(() => {
+          //     console.log('[ - ]: ', this.redirect);
+          //     this.$router.push({ path: this.redirect || '/', query: this.otherQuery })
+          //     console.log('[ - ]: ', '3333333');
+          //     this.loading = false
+          //   })
         } else {
-          console.log('error submit!!')
-          return false
+          // console.log('error submit!!')
+          // return false
         }
       })
     },

@@ -31,14 +31,19 @@ const mutations = {
 const actions = {
   // user login
   login({ commit }, userInfo) {
-    const { username, password } = userInfo
+    const { user_name, password } = userInfo
     return new Promise((resolve, reject) => {
-      login({ username: username.trim(), password: password }).then(response => {
+      console.log('[ -user_name, passworduser_name, password - ]: ', user_name, password)
+      login({ user_name: user_name.trim(), password: password }).then(response => {
         const { data } = response
+        console.log('[ -response11111 ]: ', response)
         commit('SET_TOKEN', data.token)
         setToken(data.token)
+        console.log('[ - ]: ', '122222')
         resolve()
       }).catch(error => {
+        console.log('[ -response12222222221111 ]: ', error)
+        console.log('[ - ]: ', '87878788')
         reject(error)
       })
     })
@@ -48,19 +53,18 @@ const actions = {
   getInfo({ commit, state }) {
     return new Promise((resolve, reject) => {
       getInfo(state.token).then(response => {
+        console.log('[responseresponseresponse - ]: ', response)
         const { data } = response
-
         if (!data) {
           reject('Verification failed, please Login again.')
         }
-
         const { roles, name, avatar, introduction } = data
-
         // roles must be a non-empty array
+        console.log('[ -rolesroles ]: ', roles)
+        console.log('[ -rolesroles123123 ]: ', roles[0])
         if (!roles || roles.length <= 0) {
           reject('getInfo: roles must be a non-null array!')
         }
-
         commit('SET_ROLES', roles)
         commit('SET_NAME', name)
         commit('SET_AVATAR', avatar)

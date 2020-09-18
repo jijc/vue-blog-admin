@@ -17,6 +17,8 @@ export default {
     avatarUpload: 'Avatar Upload',
     dropzone: 'Dropzone',
     sticky: 'Sticky',
+    Article: 'Article',
+    class: 'Class',
     countTo: 'Count To',
     componentMixin: 'Mixin',
     backToTop: 'Back To Top',
@@ -81,6 +83,12 @@ export default {
     thirdparty: 'Or connect with',
     thirdpartyTips: 'Can not be simulated on local, so please combine you own business simulation! ! !'
   },
+  register: {
+    title: '注册',
+    register: '注册',
+    username: '账号',
+    password: '密码'
+  },
   documentation: {
     documentation: 'Documentation',
     github: 'Github Repository'
@@ -116,6 +124,7 @@ export default {
     title: 'Title',
     importance: 'Imp',
     type: 'Type',
+    tag: 'Tag',
     remark: 'Remark',
     search: 'Search',
     add: 'Add',

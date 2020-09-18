@@ -14,6 +14,9 @@ export function parseTime(time, cFormat) {
   }
   const format = cFormat || '{y}-{m}-{d} {h}:{i}:{s}'
   let date
+  if (time.indexOf('T') !== -1 && typeof time === 'string') {
+    time = new Date(time)
+  }
   if (typeof time === 'object') {
     date = time
   } else {
@@ -326,7 +329,7 @@ export function createUniqueString() {
 }
 
 /**
- * Check if an element has a class
+ * Check if an element has a tag
  * @param {HTMLElement} elm
  * @param {string} cls
  * @returns {boolean}
@@ -336,7 +339,7 @@ export function hasClass(ele, cls) {
 }
 
 /**
- * Add class to element
+ * Add tag to element
  * @param {HTMLElement} elm
  * @param {string} cls
  */
@@ -345,7 +348,7 @@ export function addClass(ele, cls) {
 }
 
 /**
- * Remove class from element
+ * Remove tag from element
  * @param {HTMLElement} elm
  * @param {string} cls
  */
